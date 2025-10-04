@@ -35,5 +35,18 @@
   },
   "dependencies": {
     "react-markdown": "^9.0.0"
-  }
+  },
+  "description": "An AI agent scaffold that based on evm.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninglinLiu/onchain-data-copyright-saas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ninglinLiu/onchain-data-copyright-saas/issues"
+  },
+  "homepage": "https://github.com/ninglinLiu/onchain-data-copyright-saas#readme"
 }
