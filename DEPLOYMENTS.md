@@ -13,25 +13,21 @@
 - **Solidity Version:** 0.8.18
 - **Optimizer:** Enabled (200 runs)
 
-### 📋 License Contract (Modular)
+### 📋 Legacy Contract (Deprecated)
 - **Address:** [`0xc4872863fAFA8116E02004AE2Ea4a375808da312`](https://holesky.etherscan.io/address/0xc4872863fAFA8116E02004AE2Ea4a375808da312#code)
 - **Network:** Holesky Testnet
-- **Chain ID:** 17000
-- **Verified:** ✅ Manual (via flattened source)
-- **Deployed At:** 2025-10-17
-- **Contract:** `License.sol`
-- **Solidity Version:** 0.8.20
-- **Optimizer:** Enabled (200 runs)
-- **Notes:** Fixed `struct License` → `struct LicenseTemplate` naming conflict
+- **Status:** ⚠️ Deprecated (migrated to BodhiBasedCopyright architecture)
+- **Original Contract:** `License.sol` (old modular system)
+- **Notes:** This contract is from the previous architecture. Use BodhiBasedCopyright for new deployments.
 
 ---
 
 ## 🧪 Development Environment (Localhost)
 
 ### Local Hardhat Network (Chain ID: 31337)
-- **Registry:** `0x5FbDB2315678afecb367f032d93F642f64180aa3`
-- **LicenseCenter:** `0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512`
-- **Bodhi1155:** `0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0`
+- **Bodhi System:** Use `scripts/01_deploy_bodhi_system.ts` for local deployment
+- **BodhiBasedCopyright:** Deploy using main architecture scripts
+- **Note:** Legacy contracts (Registry, LicenseCenter, Bodhi1155) have been replaced by the new architecture
 
 ---
 
@@ -42,11 +38,10 @@
 - Full source code and metadata available
 - ABI extracted and integrated into frontend
 
-### License Contract
-- ✅ Successfully verified using **manual flattened source**
-- Resolved naming conflict: `struct License` → `struct LicenseTemplate`
-- Flattened source includes OpenZeppelin dependencies (Ownable, Context)
-- Verification file: `packages/hardhat/flat/License_final.sol`
+### Legacy License Contract (Deprecated)
+- ⚠️ This was from the old modular architecture
+- Replaced by BodhiBasedCopyright in the current system
+- For reference only - use BodhiBasedCopyright for new deployments
 
 ---
 
@@ -61,7 +56,7 @@
 ### Contract Explorers
 - **BodhiBasedCopyright (Etherscan):** https://holesky.etherscan.io/address/0x73da0D133EF544B5107271A36eB30c69f84adcac#code
 - **BodhiBasedCopyright (Sourcify):** https://repo.sourcify.dev/17000/0x73da0D133EF544B5107271A36eB30c69f84adcac/
-- **License (Etherscan):** https://holesky.etherscan.io/address/0xc4872863fAFA8116E02004AE2Ea4a375808da312#code
+- **Legacy License (Etherscan - Deprecated):** https://holesky.etherscan.io/address/0xc4872863fAFA8116E02004AE2Ea4a375808da312#code
 
 ---
 
@@ -72,8 +67,8 @@
 # Navigate to hardhat directory
 cd packages/hardhat
 
-# Deploy License contract
-npx hardhat run scripts/deploy-license.ts --network holesky
+# Deploy BodhiBasedCopyright contract
+npx hardhat run scripts/deploy-bodhi-copyright.ts --network holesky
 
 # Verify contract (if not auto-verified)
 npx hardhat verify --network holesky <CONTRACT_ADDRESS>

@@ -554,13 +554,21 @@ export const LICENSE_ABI = [
 ] as const;
 
 // ============================================
-// 🗂️ Legacy/Development Contracts (Localhost)
+// 🗂️ Legacy Contracts (Deprecated - Old Architecture)
+// ============================================
+// Note: These addresses are from the old modular architecture
+// and are kept for reference only. Use holeskyContracts for new deployments.
+export const legacyContracts = {
+  registry: "0x5FbDB2315678afecb367f032d93F642f64180aa3", // Deprecated
+  licenseCenter: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512", // Deprecated
+  bodhi1155: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0", // Deprecated
+  license: LICENSE_ADDRESS, // Deprecated - use BodhiBasedCopyright
+};
+
+// ============================================
+// 📦 Current Deployment (Recommended)
 // ============================================
 export const deployedContracts = {
-  registry: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-  licenseCenter: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
-  bodhi1155: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-  license: LICENSE_ADDRESS,
   bodhiBasedCopyright: BODHI_BASED_COPYRIGHT_ADDRESS
 };
 
