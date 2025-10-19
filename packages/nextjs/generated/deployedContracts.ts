@@ -155,58 +155,65 @@ const contracts = {
           address: "0x73da0D133EF544B5107271A36eB30c69f84adcac",
           abi: [
             {
-              inputs: [
-                {
-                  internalType: "address",
-                  name: "_bodhi",
-                  type: "address"
-                }
-              ],
+              inputs: [],
               stateMutability: "nonpayable",
               type: "constructor"
             },
             {
-              anonymous: false,
-              inputs: [
-                {
-                  indexed: true,
-                  internalType: "uint256",
-                  name: "assetId",
-                  type: "uint256"
-                },
-                {
-                  indexed: false,
-                  internalType: "uint256",
-                  name: "licenseId",
-                  type: "uint256"
-                },
-                {
-                  indexed: false,
-                  internalType: "string",
-                  name: "name",
-                  type: "string"
-                },
-                {
-                  indexed: false,
-                  internalType: "string",
-                  name: "contentURI",
-                  type: "string"
-                }
-              ],
-              name: "LicenseGenerated",
-              type: "event"
-            },
-            {
               inputs: [],
-              name: "bodhi",
+              name: "copyrightNFT",
               outputs: [
                 {
-                  internalType: "contract IBodhi",
+                  internalType: "contract CopyrightNFT",
                   name: "",
                   type: "address"
                 }
               ],
               stateMutability: "view",
+              type: "function"
+            },
+            {
+              inputs: [
+                {
+                  internalType: "bytes32",
+                  name: "_contentHash",
+                  type: "bytes32"
+                },
+                {
+                  internalType: "string",
+                  name: "_name",
+                  type: "string"
+                },
+                {
+                  internalType: "uint256",
+                  name: "_licenseId",
+                  type: "uint256"
+                },
+                {
+                  internalType: "string",
+                  name: "_uri",
+                  type: "string"
+                },
+                {
+                  internalType: "string",
+                  name: "_link",
+                  type: "string"
+                },
+                {
+                  internalType: "uint256",
+                  name: "_bodhiId",
+                  type: "uint256"
+                }
+              ],
+              name: "generateCopyright",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256"
+                }
+              ],
+              stateMutability: "nonpayable",
               type: "function"
             },
             {
@@ -218,18 +225,18 @@ const contracts = {
                 },
                 {
                   internalType: "string",
-                  name: "_contentURI",
+                  name: "_uri",
                   type: "string"
                 },
                 {
                   internalType: "string",
-                  name: "_externalLink",
+                  name: "_link",
                   type: "string"
                 },
                 {
-                  internalType: "uint8",
-                  name: "_licenseType",
-                  type: "uint8"
+                  internalType: "uint256",
+                  name: "_bodhiId",
+                  type: "uint256"
                 }
               ],
               name: "generateLicense",
@@ -247,55 +254,35 @@ const contracts = {
               inputs: [
                 {
                   internalType: "uint256",
-                  name: "_assetId",
+                  name: "_copyrightId",
                   type: "uint256"
                 }
               ],
-              name: "getLicenseByAssetId",
+              name: "getCopyright",
               outputs: [
                 {
-                  components: [
-                    {
-                      internalType: "uint256",
-                      name: "id",
-                      type: "uint256"
-                    },
-                    {
-                      internalType: "string",
-                      name: "name",
-                      type: "string"
-                    },
-                    {
-                      internalType: "string",
-                      name: "contentURI",
-                      type: "string"
-                    },
-                    {
-                      internalType: "string",
-                      name: "externalLink",
-                      type: "string"
-                    },
-                    {
-                      internalType: "enum BodhiBasedCopyright.LicenseType",
-                      name: "licenseType",
-                      type: "uint8"
-                    }
-                  ],
-                  internalType: "struct BodhiBasedCopyright.License",
-                  name: "",
-                  type: "tuple"
-                }
-              ],
-              stateMutability: "view",
-              type: "function"
-            },
-            {
-              inputs: [],
-              name: "licenseIndex",
-              outputs: [
+                  internalType: "bytes32",
+                  name: "contentHash",
+                  type: "bytes32"
+                },
+                {
+                  internalType: "string",
+                  name: "name",
+                  type: "string"
+                },
                 {
                   internalType: "uint256",
-                  name: "",
+                  name: "licenseId",
+                  type: "uint256"
+                },
+                {
+                  internalType: "string",
+                  name: "link",
+                  type: "string"
+                },
+                {
+                  internalType: "uint256",
+                  name: "bodhi_id",
                   type: "uint256"
                 }
               ],
@@ -306,17 +293,12 @@ const contracts = {
               inputs: [
                 {
                   internalType: "uint256",
-                  name: "",
+                  name: "_licenseId",
                   type: "uint256"
                 }
               ],
-              name: "licenses",
+              name: "getLicense",
               outputs: [
-                {
-                  internalType: "uint256",
-                  name: "id",
-                  type: "uint256"
-                },
                 {
                   internalType: "string",
                   name: "name",
@@ -324,18 +306,31 @@ const contracts = {
                 },
                 {
                   internalType: "string",
-                  name: "contentURI",
+                  name: "uri",
                   type: "string"
                 },
                 {
                   internalType: "string",
-                  name: "externalLink",
+                  name: "link",
                   type: "string"
                 },
                 {
-                  internalType: "enum BodhiBasedCopyright.LicenseType",
-                  name: "licenseType",
-                  type: "uint8"
+                  internalType: "uint256",
+                  name: "bodhi_id",
+                  type: "uint256"
+                }
+              ],
+              stateMutability: "view",
+              type: "function"
+            },
+            {
+              inputs: [],
+              name: "licenseNFT",
+              outputs: [
+                {
+                  internalType: "contract LicenseNFT",
+                  name: "",
+                  type: "address"
                 }
               ],
               stateMutability: "view",
