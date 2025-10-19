@@ -1,5 +1,4 @@
 import { Chain } from "wagmi";
-import * as chains from "wagmi/chains";
 
 export type ScaffoldConfig = {
   targetNetwork: Chain;
@@ -11,7 +10,6 @@ export type ScaffoldConfig = {
 };
 
 const scaffoldConfig = {
-  // Updated to use Holesky testnet for BodhiBasedCopyright contract
   targetNetwork: {
     id: 17000,
     name: "Holesky",
