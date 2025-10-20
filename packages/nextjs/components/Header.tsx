@@ -32,6 +32,10 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/debug/BodhiBasedCopyright",
   },
   {
+    label: "API Docs",
+    href: "/api-docs",
+  },
+  {
     label: "Twitter",
     href: "https://twitter.com/0xleeduckgo",
   },

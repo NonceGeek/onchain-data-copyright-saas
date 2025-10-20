@@ -6,33 +6,57 @@ the api for ai dimsum devs.
 // This enables autocomplete, go to definition, etc.
 import { Application, Router } from "oak";
 import { oakCors } from "cors";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-console.log("Hello from AI Agent Generator API!");
+console.log("");
 
 const router = new Router();
 
 router
 .get("/", async (context) => {
-  context.response.body = { result: "Hello, Devs from AI Agent Generator API!" };
-})
-.get("/ai_agents", async (context) => {
+  context.response.body = { result: `# AI DimSum RightProof API Documentation
 
-  const supabase = createClient(
-  // Supabase API URL - env var exported by default.
-  Deno.env.get('SUPABASE_URL') ?? '',
-  // Supabase API ANON KEY - env var exported by default.
-  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '',
-    // Create client with Auth context of the user that called the function.
-    // This way your row-level-security (RLS) policies are applied.
-    // { global: { headers: { Authorization: req.headers.get('Authorization')! } } }
-  )
-  // 1. create a item in bodhi_user_search.
-  const { data, error } = await supabase.
-    from('bodhi_based_evm_ai_agents')
-    .select();
-  context.response.body = data
-});
+**base url:** \`https://right-proof-api.deno.dev\`
+
+## Get Methods
+
+### \`/license_nfts\`
+
+Retrieves a list of all license NFTs in the system.
+
+### \`/license_nft?id=id\`
+
+Retrieves a specific license NFT by its ID.
+
+**Parameters:**
+
+- \`id\` (required): The unique identifier of the license NFT
+
+- \`addr\` (optional): The owner of the license NFT
+
+### \`/copyright_nfts\`
+
+Retrieves a list of all copyright NFTs (datasets) in the system.
+
+### \`/copyright_nft?id=id\`
+
+Retrieves a specific copyright NFT by its ID.
+
+**Parameters:**
+
+- \`id\` (optional): The unique identifier of the copyright NFT
+- \`addr\` (optional): The owner of the copyright NFT
+
+## Post Methods
+
+### \`/license_nft/new\`
+
+Creates a new license NFT for an existing copyright.
+
+### \`/copyright_nft/new\`
+
+Creates a new copyright NFT for a dataset.
+` };
+})
 
 const app = new Application();
 
