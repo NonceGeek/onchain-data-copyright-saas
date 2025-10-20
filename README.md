@@ -1,49 +1,39 @@
 # OnChain Data Copyright SaaS
-# AI DimSum RightProof
+# DimSum RightProof
 
 important links:
 
-* [https://youtu.be/92nSSL3cfxE](https://youtu.be/92nSSL3cfxE)
-* [https://rightproof.app.aidimsum.com/](https://rightproof.app.aidimsum.com/)
-* [【腾讯文档】RightProof](https://docs.qq.com/slide/DQ1J4U3pIV2ZMZFZC)
-* [Smart Contract BodhiBasedCopyright](https://sepolia.etherscan.io/address/0x558D4A4C35d00A03A3CF831A2DcFe73BeBE58fc8#code)
-* [Smart Contract LicenseNFT](https://sepolia.etherscan.io/address/0x52e3EBaDAe5fBE562D997220Ea819BF46D4c35f5#code)
-* [Smart Contract CopyrightNFT](https://sepolia.etherscan.io/address/0x2e742854e540E5cFc8E715EFeaDea6e49b2De6C6#code)
+* GitHub 仓库：https://github.com/noncegeek/onchain-data-copyright-saas
+
+* Demo 视频: [https://youtu.be/92nSSL3cfxE](https://youtu.be/92nSSL3cfxE)
+* 在线演示链接: [https://rightproof.app.aidimsum.com/](https://rightproof.app.aidimsum.com/)
+* Pitch Deck[【腾讯文档】RightProof](https://docs.qq.com/slide/DQ1J4U3pIV2ZMZFZC)
+* 合约信息：
+  * [Smart Contract BodhiBasedCopyright](https://sepolia.etherscan.io/address/0x558D4A4C35d00A03A3CF831A2DcFe73BeBE58fc8#code)
+  * [Smart Contract LicenseNFT](https://sepolia.etherscan.io/address/0x52e3EBaDAe5fBE562D997220Ea819BF46D4c35f5#code)
+  * [Smart Contract CopyrightNFT](https://sepolia.etherscan.io/address/0x2e742854e540E5cFc8E715EFeaDea6e49b2De6C6#code)
+
 
 keypoints:
 
 * 从「现实订单」出发，推导「区块链基础设施」，而非「假设需求🤔」
-* 基于 Bodhi 协议，实现数据 RWA 化，支持链上购买「数据的股份」
-* 参考开源协议的设计，设计「链上确权 License」与「数据确权合约」
+* 基于 Bodhi 协议，实现数据代币化（RWA 化），支持链上购买「数据的股份」
+* 参考开源协议的设计，设计面向数据集的「链上确权协议」与「数据确权合约」
 
 ## 🌟 Overview
 
-**OnChain Data Copyright SaaS Platform** is a blockchain-based system for data rights confirmation and Real World Asset (RWA) tokenization. Built on the Bodhi protocol, this platform enables on-chain purchase of "data shares" and provides comprehensive data rights management solutions for the AI era.
+![image-20251020161015270](https://p.ipic.vip/ruqpkx.png)
 
-### 🎯 Real-World Impact
-**Live Demo Scenario**: An AI company uploads training datasets → generates License → deploys on-chain → receives paid authorization from third parties → earns continuous royalties.
-
-## 🎯 Core Philosophy
-
-> **"Starting from 'real-world orders', deriving 'blockchain infrastructure', rather than 'hypothetical demand'"**
-
-Our approach focuses on practical business needs, ensuring that every feature serves real market demands and provides tangible value to data creators and users.
-
-## 🚀 Key Features
-
-### 📊 Data Tokenization
-- **Based on Bodhi Data Tokenization Protocol**
-- Transform data into tradeable digital assets
-- Enable fractional ownership of valuable datasets
-- Support for various data types and formats
-
-### 🔐 On-Chain Data Proof of Existence
-- **Data fingerprints (Hash) stored on-chain**
-- **The prover naturally becomes the data owner**
-- Immutable proof of data authenticity
-- Transparent ownership tracking
+- **项目名称**：DimSum RightProof: OnChain Data Copyright SaaS
+- **一句话介绍**：三大功能 — 数据存证、确权与代币化
+- **目标用户**：已有平台的数据集提供方、外部平台的数据集提供方与内容创作者。
+- **核心问题与动机（Pain Points）**：
+  1. 数据集不像开源项目一样有「协议」，尤其是关于收益如何分配的条款。
+  2. 数据集的代币化方案还未被考虑。
+- **解决方案（Solution）**：设计一套针对数据集的存证、确权与代币化的 AI SaaS 服务。
 
 ### ⚖️ On-Chain Data Rights Confirmation
+
 - **Design on-chain data protocols (License)**
 - **Clear usage methods and revenue distribution**
 - Automated royalty distribution
@@ -191,10 +181,7 @@ The platform provides a modern, intuitive interface with:
 - **Result**: Transparent research impact measurement
 
 ### 🚀 Future Plans
-- **API Service & Documentation** for SaaS integration
-- **LICENSE EDITOR** for custom license creation
-- **Enhanced data marketplace** functionality
-- **Advanced analytics** and reporting tools
+![image-20251020161544155](https://p.ipic.vip/0bjki2.png)
 
 ## 👥 Team
 
