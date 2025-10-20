@@ -7,9 +7,9 @@ import scaffoldConfig from "~~/scaffold.config";
 import { getTargetNetwork } from "~~/utils/scaffold-eth";
 import { AbiFunctionReturnType, ContractAbi, contracts } from "~~/utils/scaffold-eth/contract";
 
+
 const ArweaveContent = ({ link }: { link: string }) => {
   const [abstract, setAbstract] = useState<string>("");
-
   useEffect(() => {
     const fetchContent = async () => {
       try {
