@@ -3,8 +3,9 @@
 
 important links:
 
+* [https://youtu.be/92nSSL3cfxE](https://youtu.be/92nSSL3cfxE)
 * [https://rightproof.app.aidimsum.com/](https://rightproof.app.aidimsum.com/)
-* [【腾讯文档】数据确权+RWA化的链上系统](https://docs.qq.com/slide/DQ1J4U3pIV2ZMZFZC)
+* [【腾讯文档】RightProof](https://docs.qq.com/slide/DQ1J4U3pIV2ZMZFZC)
 * [Smart Contract BodhiBasedCopyright](https://sepolia.etherscan.io/address/0x558D4A4C35d00A03A3CF831A2DcFe73BeBE58fc8#code)
 * [Smart Contract LicenseNFT](https://sepolia.etherscan.io/address/0x52e3EBaDAe5fBE562D997220Ea819BF46D4c35f5#code)
 * [Smart Contract CopyrightNFT](https://sepolia.etherscan.io/address/0x2e742854e540E5cFc8E715EFeaDea6e49b2De6C6#code)
@@ -71,54 +72,18 @@ Our approach focuses on practical business needs, ensuring that every feature se
 └───────────────────────────────────────────────────────────────────────────┘
 ```
 
-## 🔧 Technical Challenges & Solutions
-
-### 🚨 Multi-Protocol State Consistency
-**Challenge**: Ensuring contract state consistency across multiple protocol interactions
-**Solution**: Implemented atomic transaction patterns with rollback mechanisms and state validation checkpoints
-
-### ⚡ Multi-Chain Synchronization via Bodhi API
-**Challenge**: Synchronizing data rights across different blockchain networks
-**Solution**: Built custom Bodhi API integration layer with cross-chain state management and automated reconciliation
-
-### 📊 On-Chain Indexing Optimization
-**Challenge**: Efficient querying of large-scale data rights information
-**Solution**: Leveraged subgraph technology for real-time indexing and implemented caching strategies for sub-second query responses
-
 ### 🔒 Contract Structure (Solidity UML)
-```
-BodhiBasedCopyright
-├── License Generation
-│   ├── generateLicense()
-│   ├── getLicenseByAssetId()
-│   └── licenses mapping
-├── Ownership Management
-│   ├── transferOwnership()
-│   └── renounceOwnership()
-└── Protocol Integration
-    ├── bodhi contract reference
-    └── licenseIndex counter
 
-License Contract
-├── License Creation
-│   ├── createLicense()
-│   ├── bindLicense()
-│   └── getTotalLicenses()
-├── Status Management
-│   ├── setLicenseStatus()
-│   └── licenses mapping
-└── Ownership Control
-    ├── owner management
-    └── access control
-```
+<img width="1228" height="728" alt="image" src="https://github.com/user-attachments/assets/c506cceb-9cb3-4937-aebe-4756c778a0e2" />
+
 
 ## 🛠️ Technical Stack
 
 - **Frontend**: Next.js, React, TypeScript
-- **Blockchain**: Ethereum (Holesky Testnet)
+- **Blockchain**: Ethereum (Sepolia Testnet)
 - **Smart Contracts**: Solidity
 - **Protocol**: Bodhi Data Tokenization Protocol
-- **Network**: Holesky Testnet (Chain ID: 17000)
+- **Network**: Sepolia Testnet
 
 ## 📋 Core Components
 
@@ -151,12 +116,9 @@ License Contract
 <img width="866" height="751" alt="image" src="https://github.com/user-attachments/assets/ad0edd1d-af1a-4f21-93b7-1a5b838969b6" />
 
 
-### 🔄 User Journey Flow(TODO)
-```
-Upload Dataset → Generate License → Deploy On-Chain → Receive Authorization → Earn Royalties
-     ↓              ↓                ↓                ↓                    ↓
-  Data Owner    License Creator   Blockchain      Third Parties      Revenue Stream
-```
+### 🔄 User Journey Flow
+
+See in [demo video](https://youtu.be/92nSSL3cfxE).
 
 The platform provides a modern, intuitive interface with:
 
@@ -165,25 +127,6 @@ The platform provides a modern, intuitive interface with:
 - **Card-based layouts** for easy navigation
 - **Real-time updates** and status indicators
 - **Comprehensive filtering** and search capabilities
-
-## 🔧 Smart Contracts
-
-### BodhiBasedCopyright Contract
-- **Address**: `0x73da0D133EF544B5107271A36eB30c69f84adcac`
-- **Functions**: License generation, asset management, rights confirmation
-- **Events**: License generation, ownership transfer
-
-### License Contract
-- **Address**: `0xc4872863fAFA8116E02004AE2Ea4a375808da312`
-- **Functions**: License creation, status management, binding
-- **Events**: License creation, status updates
-
-## 🌐 Network Configuration
-
-- **Network**: Holesky Testnet
-- **Chain ID**: 17000
-- **RPC URL**: `https://ethereum-holesky.publicnode.com`
-- **Block Explorer**: `https://holesky.etherscan.io`
 
 ## 🚀 Getting Started
 
@@ -221,11 +164,11 @@ The platform provides a modern, intuitive interface with:
 
 ### Usage
 
-1. **Connect your wallet** to Holesky testnet
+1. **Connect your wallet** to Sepolia Network
 2. **Browse datasets** in the Dataset Gallery
 3. **Explore licenses** in the License Gallery
 4. **Interact with contracts** in the Debug interface
-5. **Create and manage** your data rights
+5. **Dataset to nft** in homepage
 
 ## 📈 Business Model & Real Impact
 
@@ -259,12 +202,12 @@ The platform provides a modern, intuitive interface with:
 
 - **Vision**: Building next-generation corpus × AI system and ecosystem
 - **Founded**: 2025
-- **Team**: Leeduckgo, Ning Lin 
+- **Team**: Leeduckgo, Ning Lin and others.
 
 ## 🔗 Demo & Links
 
-- **Live Demo**: [https://rightproof.aidimsum.com](https://rightproof.aidimsum.com)
-- **Documentation**: [Project Documentation](docs.qq.com)
+- **Demo Video**: [https://youtu.be/92nSSL3cfxE](https://youtu.be/92nSSL3cfxE)
+- **Deck**: [docs.qq.com](https://docs.qq.com/slide/DQ1J4U3pIV2ZMZFZC)
 - **GitHub**: [Repository](https://github.com/ninglinLiu/onchain-data-copyright-saas)
 
 ## 📄 License
